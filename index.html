@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Academic homepage for Yuxuan Ni, a PhD student working on robot SLAM, mapping, localization, and robotics systems."
+    />
+    <title>Yuxuan Ni | Robotics and SLAM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">Yuxuan Ni</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#results">Results</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">PhD Student · Robotics and SLAM</p>
+          <h1>Yuxuan Ni</h1>
+          <p class="lead">
+            I work on robot perception, multi-sensor SLAM, and field evaluation
+            for UGVs in challenging outdoor environments.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+        <aside class="profile-panel" aria-label="Profile summary">
+          <p class="profile-kicker">Academic Background</p>
+          <dl>
+            <div>
+              <dt>Current</dt>
+              <dd>PhD student at The University of Alabama</dd>
+            </div>
+            <div>
+              <dt>Graduate</dt>
+              <dd>MSc, Carnegie Mellon University</dd>
+            </div>
+            <div>
+              <dt>Undergraduate</dt>
+              <dd>B.E., UESTC and University of Glasgow</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section id="research" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Research Interests</p>
+          <h2>Reliable autonomy through careful sensing and evaluation.</h2>
+        </div>
+        <div class="interest-grid">
+          <article>
+            <h3>Multi-Sensor SLAM</h3>
+            <p>
+              Camera, LiDAR, radar, IMU/INS, and wheel-feedback integration for
+              outdoor UGV experiments in visually and GNSS-degraded scenes.
+            </p>
+          </article>
+          <article>
+            <h3>4D Radar Odometry</h3>
+            <p>
+              Module-level improvements to learning-based radar odometry,
+              preserving the original pose path while adding interpretable
+              correspondence supervision.
+            </p>
+          </article>
+          <article>
+            <h3>Robotics Evaluation</h3>
+            <p>
+              Reusable Linux/Python tools for bag processing, sensor validation,
+              trajectory analysis, runtime profiling, and result visualization.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Current robotics project directions.</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div>
+              <p class="project-label">Funding: UA-BGU</p>
+              <h3>Multi-Sensor SLAM and Mapping for UGVs</h3>
+              <p>
+                Built a ROS2-based UGV pipeline for real-world outdoor data
+                collection, localization, mapping, and field debugging. The
+                current public-facing results emphasize cross-sensor scene
+                context and top-view trajectory evaluation under low-light,
+                building-occluded, GNSS-challenged conditions.
+              </p>
+            </div>
+            <ul class="project-meta">
+              <li>Camera, LiDAR, radar comparison</li>
+              <li>Top-view trajectory evaluation</li>
+              <li>Accelerated field experiment clips</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div>
+              <p class="project-label">Funding: MathWorks</p>
+              <h3>Learning-Based 4D Radar Odometry</h3>
+              <p>
+                Parallel work on learning-based radar odometry, focused on
+                module-level correspondence supervision, frozen-backbone
+                ablations, and pose-output consistency checks. The visual
+                evidence on this page currently centers on the SLAM system while
+                this direction is summarized at a project level.
+              </p>
+            </div>
+            <ul class="project-meta">
+              <li>Correspondence-supervised module</li>
+              <li>Frozen-backbone ablation</li>
+              <li>Pose consistency checks</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="results" class="section results-section">
+        <div class="section-heading">
+          <p class="eyebrow">Figures and Videos</p>
+          <h2>Selected field experiment evidence.</h2>
+          <p class="section-note">
+            These figures and clips come from private research artifacts. Public
+            papers and datasets are not listed here because they are not
+            available at this stage.
+          </p>
+        </div>
+        <div class="result-stack">
+          <figure class="media-card result-feature">
+            <img
+              src="assets/results/spark_sensor_comparison.png"
+              alt="Camera image, LiDAR point cloud, and radar point cloud comparison"
+            />
+            <figcaption>
+              A selected field scene shown through camera imagery, LiDAR point
+              cloud structure, and radar point cloud returns from the same route
+              segment.
+            </figcaption>
+          </figure>
+          <figure class="media-card result-feature">
+            <img
+              src="assets/results/spark_low_light_triptych.png"
+              alt="Camera image, radar BEV, and LiDAR BEV in a low-light scene"
+            />
+            <figcaption>
+              Low-light route segment with building occlusion, shown as camera
+              context plus synchronized radar and LiDAR bird's-eye views.
+            </figcaption>
+          </figure>
+          <figure class="media-card result-feature compact-result">
+            <img
+              src="assets/results/spark_map_points_overview.png"
+              alt="Top and oblique views of generated map points"
+            />
+            <figcaption>
+              Generated map points rendered from the accumulated point-cloud
+              map, shown from top and oblique viewpoints.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="clip-heading">
+          <h3>Accelerated Experiment Clips</h3>
+          <p>
+            Middle segments from private UGV recordings, compressed to 5-8x
+            speed. The mapping clips focus on the scene view, while the radar
+            localization clip keeps the side panel visible for context.
+          </p>
+        </div>
+        <div class="video-showcase">
+          <figure class="media-card video-card video-primary">
+            <video
+              controls
+              muted
+              playsinline
+              preload="metadata"
+              poster="assets/videos/spark_mapping_accumulation_fast.jpg"
+            >
+              <source src="assets/videos/spark_mapping_accumulation_fast.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Accumulated mapping view from the middle of a long outdoor route,
+              shown at 8x speed after removing the side panel.
+            </figcaption>
+          </figure>
+          <div class="video-secondary-list">
+            <figure class="media-card video-card">
+              <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/videos/spark_radar_localization_fast.jpg"
+              >
+                <source src="assets/videos/spark_radar_localization_fast.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                Radar localization playback at 8x speed with the side panel
+                preserved for camera and display context.
+              </figcaption>
+            </figure>
+            <figure class="media-card video-card">
+              <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/videos/spark_loop_mapping_fast.jpg"
+              >
+                <source src="assets/videos/spark_loop_mapping_fast.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                Earlier loop-route mapping segment at 6x speed, with more route
+                evolution visible and the side panel removed.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="cv" class="section two-column">
+        <div class="section-heading">
+          <p class="eyebrow">CV</p>
+          <h2>Academic background and research materials.</h2>
+        </div>
+        <div class="text-block">
+          <p>
+            This site collects selected robotics projects, technical notes,
+            experiment figures, and short descriptions of my research direction.
+            The emphasis is on implemented systems, field evidence, and
+            evaluation workflows.
+          </p>
+          <a class="inline-link" href="assets/Yuxuan_Ni_CV.pdf">Download CV</a>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Open to research conversations in robotics and SLAM.</h2>
+        </div>
+        <address class="contact-note">
+          <p>
+            For advisor or research conversations, please use the contact
+            information listed in my CV.
+          </p>
+          <p>
+            Research areas: SLAM, radar/LiDAR/camera perception, UGV autonomy,
+            and robotics evaluation.
+          </p>
+        </address>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Yuxuan Ni. Built with GitHub Pages.</p>
+    </footer>
+  </body>
+</html>

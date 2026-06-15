@@ -331,11 +331,6 @@ dd {
   color: var(--muted);
 }
 
-.video-showcase {
-  display: grid;
-  gap: 16px;
-}
-
 .video-card {
   position: relative;
   margin: 0;
@@ -354,11 +349,6 @@ dd {
   border-bottom: 1px solid rgba(215, 224, 224, 0.18);
 }
 
-.video-hero-card video {
-  aspect-ratio: 21 / 9;
-  object-fit: cover;
-}
-
 .video-card figcaption {
   margin: 0;
   padding: 16px 18px;
@@ -369,13 +359,13 @@ dd {
   font-size: 0.92rem;
 }
 
-.video-tile-grid {
+.video-sequence-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
-.video-tile-grid .video-card figcaption {
+.video-sequence-grid .video-card figcaption {
   padding: 14px;
   font-size: 0.88rem;
 }
@@ -448,7 +438,7 @@ dd {
   .two-column,
   .contact-section,
   .project,
-  .video-tile-grid {
+  .video-sequence-grid {
     grid-template-columns: 1fr;
   }
 

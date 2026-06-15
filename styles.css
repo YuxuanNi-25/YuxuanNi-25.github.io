@@ -17,11 +17,17 @@
 }
 
 html {
+  min-height: 100%;
+  overflow-x: clip;
+  overscroll-behavior-y: none;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
+  overflow-x: clip;
+  overscroll-behavior-y: none;
   background: var(--bg);
   color: var(--ink);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -307,6 +313,10 @@ dd {
   max-width: 980px;
 }
 
+.map-result img {
+  background: #071110;
+}
+
 .clip-heading {
   margin: 48px 0 18px;
 }
@@ -321,32 +331,51 @@ dd {
   color: var(--muted);
 }
 
+.video-showcase {
+  display: grid;
+  gap: 16px;
+}
+
+.video-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #0a0f0f;
+  border: 1px solid rgba(215, 224, 224, 0.72);
+  border-radius: 8px;
+  box-shadow: 0 22px 70px rgba(29, 37, 36, 0.13);
+}
+
 .video-card video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #111716;
-  border-bottom: 1px solid var(--line);
+  background: #0a0f0f;
+  border-bottom: 1px solid rgba(215, 224, 224, 0.18);
 }
 
-.video-showcase {
+.video-hero-card video {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+.video-card figcaption {
+  margin: 0;
+  padding: 16px 18px;
+  color: rgba(245, 247, 247, 0.86);
+  background:
+    linear-gradient(180deg, rgba(19, 28, 27, 0.96), rgba(9, 14, 14, 0.98));
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.92rem;
+}
+
+.video-tile-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: 20px;
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.video-primary {
-  position: sticky;
-  top: 86px;
-}
-
-.video-secondary-list {
-  display: grid;
-  gap: 20px;
-}
-
-.video-secondary-list .media-card figcaption {
+.video-tile-grid .video-card figcaption {
   padding: 14px;
   font-size: 0.88rem;
 }
@@ -419,7 +448,7 @@ dd {
   .two-column,
   .contact-section,
   .project,
-  .video-showcase {
+  .video-tile-grid {
     grid-template-columns: 1fr;
   }
 
@@ -437,9 +466,6 @@ dd {
     padding: 64px 0;
   }
 
-  .video-primary {
-    position: static;
-  }
 }
 
 @media (max-width: 520px) {

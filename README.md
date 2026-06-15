@@ -1,9 +1,12 @@
-# YuxuanNi-25.github.io
+# Yuxuan Ni
 
-Academic homepage for Yuxuan Ni, focused on two current robotics project threads:
+Academic homepage for Yuxuan Ni, a Ph.D. student working on robotics perception,
+SLAM, mapping, and radar-based odometry.
 
-- Multi-sensor SLAM and mapping for UGVs. Funding: UA-BGU.
-- Learning-based 4D radar odometry. Funding: MathWorks.
+The site highlights selected project results from:
+
+- UA-BGU multi-sensor SLAM and mapping for UGVs.
+- MathWorks learning-based 4D radar odometry.
 
 ## Local Preview
 
@@ -15,16 +18,9 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## What To Replace Next
-
-- Keep project wording focused on generic robotics terms such as UGV, LiDAR, radar, camera, IMU/INS, ROS2, SLAM, mapping, localization, Linux, and evaluation.
-- Add future figures to `assets/results/` only when they are ready for public-facing use.
-- Add web-ready video clips to `assets/videos/`; middle route segments at 5-8x speed work best for compact project pages.
-- Update `assets/Yuxuan_Ni_CV.pdf` as the CV improves.
-
 ## GitHub Pages
 
-Create a public GitHub repository named `YuxuanNi-25.github.io`, then push these files to the `main` branch. GitHub Pages will serve the site at:
+The site is served through GitHub Pages at:
 
 ```text
 https://YuxuanNi-25.github.io

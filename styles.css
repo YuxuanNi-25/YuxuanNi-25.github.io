@@ -309,12 +309,16 @@ dd {
   object-fit: contain;
 }
 
-.compact-result {
-  max-width: 980px;
+.map-points-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.map-result img {
-  background: #071110;
+.map-point-card img {
+  aspect-ratio: 1.7 / 1;
+  object-fit: cover;
+  background: #ffffff;
 }
 
 .clip-heading {
@@ -438,6 +442,7 @@ dd {
   .two-column,
   .contact-section,
   .project,
+  .map-points-row,
   .video-sequence-grid {
     grid-template-columns: 1fr;
   }

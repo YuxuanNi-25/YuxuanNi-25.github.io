@@ -94,14 +94,14 @@
         <div class="project-list">
           <article class="project">
             <div>
-              <p class="project-label">Funding: UA-BGU</p>
+              <p class="project-label">UA-BGU project</p>
               <h3>Multi-Sensor SLAM and Mapping for UGVs</h3>
               <p>
-                Built a ROS2-based UGV pipeline for real-world outdoor data
-                collection, localization, mapping, and field debugging. The
-                current public-facing results emphasize cross-sensor scene
-                context and top-view trajectory evaluation under low-light,
-                building-occluded, GNSS-challenged conditions.
+                Built a ROS2-based UGV pipeline for synchronized camera, LiDAR,
+                4D radar, INS/RTK, and wheel-feedback data in low-light and
+                GNSS-degraded field runs. The work includes LiDAR map filtering,
+                soft-anchor localization, radar/IMU fusion, and trajectory
+                evaluation against INS/RTK references.
               </p>
             </div>
             <ul class="project-meta">
@@ -113,14 +113,15 @@
 
           <article class="project">
             <div>
-              <p class="project-label">Funding: MathWorks</p>
+              <p class="project-label">MathWorks project</p>
               <h3>Learning-Based 4D Radar Odometry</h3>
               <p>
-                Parallel work on learning-based radar odometry, focused on
-                module-level correspondence supervision, frozen-backbone
-                ablations, and pose-output consistency checks. The visual
-                evidence on this page currently centers on the SLAM system while
-                this direction is summarized at a project level.
+                Extended a learning-based 4D radar odometry pipeline for sparse
+                radar point clouds, with range/intensity pre-filtering,
+                point-multiplication experiments, camera-pose fusion, and
+                lightweight pseudo-correspondence supervision. The ablations
+                keep the pose backbone controlled while evaluating
+                correspondence and refinement gains.
               </p>
             </div>
             <ul class="project-meta">
@@ -137,9 +138,8 @@
           <p class="eyebrow">Figures and Videos</p>
           <h2>Selected field experiment evidence.</h2>
           <p class="section-note">
-            These figures and clips come from private research artifacts. Public
-            papers and datasets are not listed here because they are not
-            available at this stage.
+            Selected private research figures and clips from field evaluation
+            and mapping workflows.
           </p>
         </div>
         <div class="result-stack">
@@ -149,9 +149,7 @@
               alt="Camera image, LiDAR point cloud, and radar point cloud comparison"
             />
             <figcaption>
-              A selected field scene shown through camera imagery, LiDAR point
-              cloud structure, and radar point cloud returns from the same route
-              segment.
+              Camera, LiDAR, and radar views from one field segment.
             </figcaption>
           </figure>
           <figure class="media-card result-feature">
@@ -160,39 +158,32 @@
               alt="Camera image, radar BEV, and LiDAR BEV in a low-light scene"
             />
             <figcaption>
-              Low-light route segment with building occlusion, shown as camera
-              context plus synchronized radar and LiDAR bird's-eye views.
+              Low-light camera, radar BEV, and LiDAR BEV.
             </figcaption>
           </figure>
-          <figure class="media-card result-feature compact-result">
-            <img
-              src="assets/results/spark_map_points_overview.png"
-              alt="Top and oblique views of generated map points"
-            />
-            <figcaption>
-              Generated map points rendered from the accumulated point-cloud
-              map, shown from top and oblique viewpoints.
-            </figcaption>
-          </figure>
-          <figure class="media-card result-feature map-result">
-            <img
-              src="assets/results/ouster_map_voxel_overview.png"
-              alt="Top-down and oblique renderings of an Ouster LiDAR voxel map"
-            />
-            <figcaption>
-              Ouster LiDAR voxel map rendered from a 0.20 m point-cloud map,
-              showing both a top-down route overview and an oblique structural
-              projection.
-            </figcaption>
-          </figure>
+          <div class="map-points-row" aria-label="Top-view map point renderings">
+            <figure class="media-card map-point-card">
+              <img
+                src="assets/results/map_points_generated_top_view.png"
+                alt="Top view of generated map points"
+              />
+              <figcaption>Generated map points: top view.</figcaption>
+            </figure>
+            <figure class="media-card map-point-card">
+              <img
+                src="assets/results/ouster_voxel_top_view_white.png"
+                alt="Top view of an Ouster LiDAR voxel map"
+              />
+              <figcaption>Ouster voxel map: top view.</figcaption>
+            </figure>
+          </div>
         </div>
 
         <div class="clip-heading">
           <h3>Accelerated Experiment Clips</h3>
           <p>
             Sequential middle segments from private UGV recordings, compressed
-            to 5-8x speed. Each clip shows a different view of the same field
-            evaluation workflow.
+            to 5-8x speed.
           </p>
         </div>
         <div class="video-showcase" aria-label="Accelerated experiment video gallery">
@@ -207,10 +198,7 @@
               >
                 <source src="assets/videos/spark_mapping_accumulation_fast.mp4" type="video/mp4" />
               </video>
-              <figcaption>
-                Accumulated mapping view from the middle of a long outdoor
-                route, shown at 8x speed after removing the side panel.
-              </figcaption>
+              <figcaption>Mapping accumulation, 8x.</figcaption>
             </figure>
             <figure class="video-card">
               <video
@@ -222,10 +210,7 @@
               >
                 <source src="assets/videos/spark_radar_localization_fast.mp4" type="video/mp4" />
               </video>
-              <figcaption>
-                Radar localization playback at 8x speed with the side panel
-                preserved for camera and display context.
-              </figcaption>
+              <figcaption>Radar localization, 8x.</figcaption>
             </figure>
             <figure class="video-card">
               <video
@@ -237,10 +222,7 @@
               >
                 <source src="assets/videos/spark_loop_mapping_fast.mp4" type="video/mp4" />
               </video>
-              <figcaption>
-                Earlier loop-route mapping segment at 6x speed, with more route
-                evolution visible and the side panel removed.
-              </figcaption>
+              <figcaption>Loop-route mapping, 6x.</figcaption>
             </figure>
           </div>
         </div>
